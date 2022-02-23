@@ -351,7 +351,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 7KS82J74VW;
+						DevelopmentTeam = J4C8MHHH48;
 						LastSwiftMigration = 1220;
 						ProvisioningStyle = Manual;
 					};
@@ -715,7 +715,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 670;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 7KS82J74VW;
+				DEVELOPMENT_TEAM = J4C8MHHH48;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-video/ios",
@@ -747,7 +747,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 670;
-				DEVELOPMENT_TEAM = 7KS82J74VW;
+				DEVELOPMENT_TEAM = J4C8MHHH48;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-video/ios",
