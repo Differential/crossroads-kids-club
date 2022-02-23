@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.apollos.crossroads_kids_club.onesignal</string>
+		<string>group.com.apollos.crossroads-kids-club.onesignal</string>
 	</array>
 </dict>
 </plist>
