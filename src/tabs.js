@@ -1,23 +1,17 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   NavigationService,
-  withTheme,
   useTheme,
   Icon,
   Touchable,
 } from '@apollosproject/ui-kit';
 import { useApolloClient } from '@apollo/client';
-import {
-  createFeatureFeedTab,
-  UserAvatarConnected,
-  ConnectScreenConnected,
-} from '@apollosproject/ui-connected';
+import { createFeatureFeedTab } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
+import SplashScreen from 'react-native-splash-screen';
 
 const HeaderLogo = () => {
   const theme = useTheme();
@@ -27,21 +21,6 @@ const HeaderLogo = () => {
       size={theme.sizing.baseUnit * 1.5}
       fill={theme.colors.primary}
     />
-  );
-};
-
-const ProfileButton = () => {
-  const navigation = useNavigation();
-  return (
-    <Touchable
-      onPress={() => {
-        navigation.navigate('UserSettingsNavigator');
-      }}
-    >
-      <View>
-        <UserAvatarConnected size="xsmall" />
-      </View>
-    </Touchable>
   );
 };
 
@@ -77,9 +56,8 @@ const tabBarIcon = (name) => {
 const HomeTab = createFeatureFeedTab({
   screenOptions: {
     headerHideShadow: true,
-    headerCenter: HeaderLogo,
     headerRight: SearchButton,
-    headerLeft: ProfileButton,
+    headerLeft: HeaderLogo,
     headerLargeTitle: false,
   },
   tabName: 'Home',
@@ -88,39 +66,16 @@ const HomeTab = createFeatureFeedTab({
 
 const ReadTab = createFeatureFeedTab({
   options: {
-    headerLeft: ProfileButton,
+    headerLeft: HeaderLogo,
   },
   tabName: 'Read',
   feedName: 'READ',
 });
 
-const WatchTab = createFeatureFeedTab({
-  options: {
-    headerLeft: ProfileButton,
-  },
-  tabName: 'Watch',
-  feedName: 'WATCH',
-});
-
-const PrayTab = createFeatureFeedTab({
-  options: {
-    headerLeft: ProfileButton,
-  },
-  tabName: 'Pray',
-  feedName: 'PRAY',
-});
-
-const ConnectTab = createFeatureFeedTab({
-  options: {
-    headerLeft: ProfileButton,
-  },
-  tabName: 'Connect',
-  feedName: 'CONNECT',
-});
-
 const { Navigator, Screen } = createBottomTabNavigator();
 
 const TabNavigator = () => {
+  SplashScreen.hide();
   const client = useApolloClient();
   // this is only used by the tab loaded first
   // if there is a new version of the onboarding flow,
@@ -143,21 +98,6 @@ const TabNavigator = () => {
         name="Read"
         component={ReadTab}
         options={{ tabBarIcon: tabBarIcon('sections') }}
-      />
-      <Screen
-        name="Watch"
-        component={WatchTab}
-        options={{ tabBarIcon: tabBarIcon('video') }}
-      />
-      <Screen
-        name="Pray"
-        component={PrayTab}
-        options={{ tabBarIcon: tabBarIcon('like') }}
-      />
-      <Screen
-        name="Connect"
-        component={ConnectTab}
-        options={{ tabBarIcon: tabBarIcon('profile') }}
       />
     </Navigator>
   );
