@@ -42,20 +42,7 @@ const AppProviders = ({ children }) => (
           }),
       }}
     >
-      <AuthProvider
-        navigateToAuth={() => NavigationService.navigate('Auth')}
-        navigate={NavigationService.navigate}
-        closeAuth={() =>
-          checkOnboardingStatusAndNavigate({
-            client,
-            navigation: NavigationService,
-          })
-        }
-      >
-        <AnalyticsProvider>
-          <LiveProvider>{children}</LiveProvider>
-        </AnalyticsProvider>
-      </AuthProvider>
+      <AnalyticsProvider>{children}</AnalyticsProvider>
     </NotificationsProvider>
   </ClientProvider>
 );
