@@ -19,7 +19,7 @@ jobs:
         node-version: 14
 
     - name: Setup Ruby
-    - uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
 
     - name: Decrypt Environment Variables and Apple API Key
       run: (npx @apollosproject/apollos-cli secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
@@ -49,7 +49,7 @@ jobs:
         node-version: 14
 
     - name: Setup Ruby
-    - uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
 
     - name: Decrypt Environment Variables and Keystore
       run: (npx @apollosproject/apollos-cli secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
