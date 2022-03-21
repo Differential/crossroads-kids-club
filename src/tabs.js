@@ -1,27 +1,13 @@
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {
-  NavigationService,
-  useTheme,
-  Icon,
-  Touchable,
-} from '@apollosproject/ui-kit';
-import { useApolloClient } from '@apollo/client';
+import { useTheme, Icon, Touchable } from '@apollosproject/ui-kit';
 import { createFeatureFeedTab } from '@apollosproject/ui-connected';
-import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 import SplashScreen from 'react-native-splash-screen';
 
 const HeaderLogo = () => {
   const theme = useTheme();
-  return (
-    <Icon
-      name="brand-icon"
-      size={theme.sizing.baseUnit * 1.5}
-      fill={theme.colors.primary}
-    />
-  );
+  return <Icon name="brand-icon" size={theme.sizing.baseUnit * 3} />;
 };
 
 const SearchButton = () => {
@@ -79,14 +65,14 @@ const TabNavigator = () => {
   return (
     <Navigator lazy>
       <Screen
-        name="Home"
+        name="Recently Added"
         component={HomeTab}
-        options={{ tabBarIcon: tabBarIcon('home') }}
+        options={{ tabBarIcon: tabBarIcon('play-square') }}
       />
       <Screen
-        name="Read"
+        name="Explore"
         component={ReadTab}
-        options={{ tabBarIcon: tabBarIcon('sections') }}
+        options={{ tabBarIcon: tabBarIcon('compass') }}
       />
     </Navigator>
   );
