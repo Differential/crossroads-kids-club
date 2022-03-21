@@ -1,16 +1,15 @@
 import querystring from 'querystring';
 import PropTypes from 'prop-types';
+import analytics from '@segment/analytics-react-native';
 import { NavigationService } from '@apollosproject/ui-kit';
-import { AuthProvider } from '@apollosproject/ui-auth';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';
 import { NotificationsProvider } from '@apollosproject/ui-notifications';
-import {
-  LiveProvider,
-  ACCEPT_FOLLOW_REQUEST,
-} from '@apollosproject/ui-connected';
-import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
+import { ACCEPT_FOLLOW_REQUEST } from '@apollosproject/ui-connected';
+import ApollosConfig from '@apollosproject/config';
 
 import ClientProvider, { client } from './client';
+
+analytics.setup(ApollosConfig.SEGMENT_KEY || '');
 
 const AppProviders = ({ children }) => (
   <ClientProvider>
@@ -42,7 +41,13 @@ const AppProviders = ({ children }) => (
           }),
       }}
     >
-      <AnalyticsProvider>{children}</AnalyticsProvider>
+      <AnalyticsProvider
+        trackFunctions={[
+          ({ eventName, properties }) => analytics.track(eventName, properties),
+        ]}
+      >
+        {children}
+      </AnalyticsProvider>
     </NotificationsProvider>
   </ClientProvider>
 );
