@@ -1,13 +1,19 @@
+import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useTheme, Icon, Touchable } from '@apollosproject/ui-kit';
+import { useTheme, Icon, Touchable, H6 } from '@apollosproject/ui-kit';
 import { createFeatureFeedTab } from '@apollosproject/ui-connected';
 import SplashScreen from 'react-native-splash-screen';
 
 const HeaderLogo = () => {
   const theme = useTheme();
-  return <Icon name="brand-icon" size={theme.sizing.baseUnit * 3} />;
+  return (
+    <>
+      <Icon name="brand-icon" size={theme.sizing.baseUnit * 3} />
+      <H6>By Crossroads Church</H6>
+    </>
+  );
 };
 
 const SearchButton = () => {
@@ -44,7 +50,7 @@ const HomeTab = createFeatureFeedTab({
     headerHideShadow: true,
     headerRight: SearchButton,
     headerLeft: HeaderLogo,
-    headerLargeTitle: false,
+    showTitle: false,
   },
   tabName: 'Home',
   feedName: 'HOME',
@@ -53,6 +59,7 @@ const HomeTab = createFeatureFeedTab({
 const ReadTab = createFeatureFeedTab({
   options: {
     headerLeft: HeaderLogo,
+    showTitle: false,
   },
   tabName: 'Read',
   feedName: 'READ',
