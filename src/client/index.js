@@ -11,8 +11,6 @@ import ApollosConfig from '@apollosproject/config';
 import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
 import { updatePushId } from '@apollosproject/ui-notifications';
 
-import { NavigationService } from '@apollosproject/ui-kit';
-
 import cache, { ensureCacheHydration } from './cache';
 
 const wipeData = () =>
@@ -34,11 +32,9 @@ let storeIsResetting = false;
 const onAuthError = async () => {
   if (!storeIsResetting) {
     storeIsResetting = true;
-    await client.stop();
     await client.clearStore();
   }
   storeIsResetting = false;
-  NavigationService.resetToAuth();
 };
 
 // Android's emulator requires localhost network traffic to go through 10.0.2.2
@@ -80,10 +76,6 @@ export const client = new ApolloClient({
   name: getApplicationName(),
   version: getVersion(),
 });
-
-wipeData();
-// Ensure that media player still works after logout.
-client.onClearStore(() => wipeData());
 
 const ClientProvider = ({ children }) => {
   useEffect(() => {
