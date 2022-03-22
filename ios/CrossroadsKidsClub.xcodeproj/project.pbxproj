@@ -713,7 +713,7 @@
 				CODE_SIGN_ENTITLEMENTS = CrossroadsKidsClub/CrossroadsKidsClub.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 26;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = J4C8MHHH48;
 				HEADER_SEARCH_PATHS = (
@@ -746,7 +746,7 @@
 				CODE_SIGN_ENTITLEMENTS = CrossroadsKidsClub/CrossroadsKidsClub.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = J4C8MHHH48;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
