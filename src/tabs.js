@@ -5,6 +5,7 @@ import { useTheme, Icon, Touchable, H6 } from '@apollosproject/ui-kit';
 import { createFeatureFeedTab } from '@apollosproject/ui-connected';
 import SplashScreen from 'react-native-splash-screen';
 
+const Empty = () => null;
 const HeaderLogo = () => {
   const theme = useTheme();
   return (
@@ -49,7 +50,8 @@ const HomeTab = createFeatureFeedTab({
     headerHideShadow: true,
     headerRight: SearchButton,
     headerLeft: HeaderLogo,
-    showTitle: false,
+    headerCenter: Empty,
+    headerLargeTitle: false,
   },
   tabName: 'Home',
   feedName: 'HOME',
@@ -58,7 +60,8 @@ const HomeTab = createFeatureFeedTab({
 const ReadTab = createFeatureFeedTab({
   options: {
     headerLeft: HeaderLogo,
-    showTitle: false,
+    headerCenter: Empty,
+    headerLargeTitle: false,
   },
   tabName: 'Read',
   feedName: 'READ',
