@@ -53,10 +53,10 @@
     formik "1.5.1"
     yup "^0.27.0"
 
-"@apollosproject/ui-connected@^2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.43.1.tgz#d12d51dd160c1f3ca453c7e9897c8fc6452d005f"
-  integrity sha512-1o140TcdrdVYi32c2nEO6iC7TA3sgagCFFO5sI4MlArzuhelmVxWuDFftDSsaTvHT2K9nUTiVmBin4426nZ6Sw==
+"@apollosproject/ui-connected@^2.45.0":
+  version "2.45.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.45.0.tgz#8ea3060ba75d33735943a5a796af186fee164afc"
+  integrity sha512-fTA2ejs9UM5iX3/k3JSAMBsG3caTSPkf/fEIcAu8b5c1f5fsMHUgeHWluaCCp2G8P0uHmALCefN/1ajoW6DgKQ==
   dependencies:
     "@gorhom/bottom-sheet" "3.4.1"
     apollo-upload-client "^17.0.0"
@@ -64,10 +64,10 @@
     lodash "^4.17.11"
     moment "^2.29.1"
 
-"@apollosproject/ui-fragments@^2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-fragments/-/ui-fragments-2.43.1.tgz#43d9408cf149c509e21aa513aed20eec9e7730fb"
-  integrity sha512-N/o37KVPbT9ilu5+dZQTI3LftT8EPPIYVOcvU9Y2ZPwRtTrH8T+oR3EmG14x2J+1IUDOmwjDAPjLrVAh3MQCTw==
+"@apollosproject/ui-fragments@^2.45.0":
+  version "2.45.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-fragments/-/ui-fragments-2.45.0.tgz#85876319eccdc81d449c0171636be967c5f9ef50"
+  integrity sha512-C6whAU0V9c2PYqJ/hRWsjNhcOwuVexnykNKWxPWOFpQPZC5xPykB4s1ZhEznLE8iTwHuOcJNb7jDdOn0fIoroA==
   dependencies:
     "@apollo/client" "3.3.20"
 
@@ -80,11 +80,12 @@
     entities "^1.1.2"
     htmlparser2 "3.9.2"
 
-"@apollosproject/ui-kit@^2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.43.1.tgz#3812299e7df95af7239b3f18634ff4935a85cad4"
-  integrity sha512-gow2TLaKnSibdwzuqou4f3JXwxUB/Iv8Um1Rl0QS+6EBajC8u/tP4G6TxKVMSKIJz3eZ/4uH7YzGSM/sEgC73w==
+"@apollosproject/ui-kit@^2.45.0":
+  version "2.45.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.45.0.tgz#1c0e4e72404cb80cf53adc74caf5d2da8484951e"
+  integrity sha512-gHka3UK3HfbjZypAlYOllV0WWPMuilCsWVU9LueEiv7picUNRBK2lViUTvid5OrPu19F++pvSEOh42IEa+BoyQ==
   dependencies:
+    "@expo/react-native-action-sheet" "^3.12.0"
     "@react-native-community/blur" "^3.6.0"
     "@react-native-picker/picker" "^1.9.4"
     color "^3.1.0"
@@ -105,13 +106,14 @@
   dependencies:
     "@apollo/client" "3.3.20"
 
-"@apollosproject/ui-media-player@^2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-2.43.1.tgz#724418e5fc3ab8ccfb4a146c7ea1b3a1e88dccd3"
-  integrity sha512-xI+QxEKmtVQLXIw28Y0rZ4k6ed496B/yqvCGbX9mnLg1sVc9sbHy6bDcj26Eq8yFIQCmFZ31+X6c88yDbp6Uog==
+"@apollosproject/ui-media-player@^2.45.0":
+  version "2.45.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-2.45.0.tgz#77bff03e25ed21ea60a9bd600afd74855548d5ec"
+  integrity sha512-F0mWm+tIboXEt6tk9Ca4kG28Bz6PCCxnS2huY7Ito+PFD4ZYtQTdJJWf/APM5Zm3Ru7rJmhGz8X8dg0yIlySzA==
   dependencies:
     "@types/color" "^3.0.1"
     color "^3.1.2"
+    react-native-youtube-iframe "~2.2.2"
     use-debounce "5.1.0"
 
 "@apollosproject/ui-notifications@^2.43.1":
@@ -963,6 +965,14 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@expo/react-native-action-sheet@^3.12.0":
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/@expo/react-native-action-sheet/-/react-native-action-sheet-3.13.0.tgz#b4cb08440c54b5ec0b3e429cac396422da1d9442"
+  integrity sha512-EFLK35TBsM28W43SY54lISAIvjEm9584LIRWXsYaf5sgmfF65oWAOQP4UyKxMPLYGoaKjnCAJVFNtZUK80ss9A==
+  dependencies:
+    "@types/hoist-non-react-statics" "^3.3.1"
+    hoist-non-react-statics "^3.3.0"
+
 "@gorhom/bottom-sheet@3.4.1":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@gorhom/bottom-sheet/-/bottom-sheet-3.4.1.tgz#649ee59a78796b906789120740c656d891225987"
@@ -1598,6 +1608,14 @@
   resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.41.tgz#f6ecf57d1b12d2befcce00e928a6a097c22980aa"
   integrity sha512-ewXv/ceBaJprikMcxCmWU1FKyMAQ2X7a9Gtmzw8fcg2kIePI1crERDM818W+XYrxqdBBOdlf2rm137bU+BltCA==
 
+"@types/hoist-non-react-statics@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+  integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/invariant@^2.2.35":
   version "2.2.35"
   resolved "https://registry.yarnpkg.com/@types/invariant/-/invariant-2.2.35.tgz#cd3ebf581a6557452735688d8daba6cf0bd5a3be"
@@ -1641,6 +1659,25 @@
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.2.tgz#4c62fae93eb479660c3bd93f9d24d561597a8281"
   integrity sha512-ekoj4qOQYp7CvjX8ZDBgN86w3MqQhLE1hczEJbEIjgFEumDy+na/4AJAbLXfgEWFNB2pKadM5rPFtuSGMWK7xA==
+
+"@types/prop-types@*":
+  version "15.7.4"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
+  integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
+
+"@types/react@*":
+  version "17.0.41"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.41.tgz#6e179590d276394de1e357b3f89d05d7d3da8b85"
+  integrity sha512-chYZ9ogWUodyC7VUTRBfblysKLjnohhFY9bGLwvnUFFy48+vB9DikmB3lW0qTFmBcKSzmdglcvkHK71IioOlDA==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -2858,6 +2895,11 @@ cssstyle@^2.3.0:
   integrity sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==
   dependencies:
     cssom "~0.3.6"
+
+csstype@^3.0.2:
+  version "3.0.11"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.11.tgz#d66700c5eacfac1940deb4e3ee5642792d85cd33"
+  integrity sha512-sa6P2wJ+CAbgyy4KFssIb/JNMLxFvKF1pCYCSXS8ZMuqZnMsrxqI2E5sPyoTpxoPU/gVZMzr2zjOfg8GIZOMsw==
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -6989,7 +7031,7 @@ react-native-webview@^11.0.0:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
 
-react-native-youtube-iframe@^2.2.2:
+react-native-youtube-iframe@^2.2.2, react-native-youtube-iframe@~2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/react-native-youtube-iframe/-/react-native-youtube-iframe-2.2.2.tgz#ade1a2e4ead3d539fbb80463f45b59ff1b510b55"
   integrity sha512-og2KW21kCwAHKcnWoyWWBYC6J2Xtqjjwpghhoy9G6zfwZkr8Ej27BbQIAKM/TheJJUZ5/YUrqsgqAdnFYDx5TQ==

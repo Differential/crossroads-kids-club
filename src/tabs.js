@@ -53,7 +53,7 @@ const HomeTab = createFeatureFeedTab({
     headerCenter: Empty,
     headerLargeTitle: false,
   },
-  tabName: 'Home',
+  tabName: 'Recently Added',
   feedName: 'HOME',
 });
 
@@ -63,7 +63,7 @@ const ReadTab = createFeatureFeedTab({
     headerCenter: Empty,
     headerLargeTitle: false,
   },
-  tabName: 'Read',
+  tabName: 'Explore',
   feedName: 'READ',
 });
 
