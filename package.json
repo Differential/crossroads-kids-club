@@ -99,7 +99,7 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollosproject/react-native-make": "^3.0.4",
+    "@apollosproject/react-native-make": "^3.0.5",
     "@babel/core": "^7.14.6",
     "@babel/runtime": "^7.14.6",
     "@react-native-community/eslint-config": "^3.0.0",
