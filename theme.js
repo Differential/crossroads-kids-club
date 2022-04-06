@@ -17,7 +17,6 @@ const ICONS = {
       source={require('./banner.png')}
     />
   ),
-
   PlaySquare: makeIcon(({ size = 32, fill, ...otherProps } = {}) => (
     <Svg width={size} height={size} viewBox="0 0 26 26" fill={fill}>
       <Path

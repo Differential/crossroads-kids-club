@@ -29,6 +29,7 @@ const SearchButton = () => {
         name="search"
         size={theme.sizing.baseUnit * 2}
         fill={theme.colors.primary}
+        weight="bold"
       />
     </Touchable>
   );
@@ -36,7 +37,7 @@ const SearchButton = () => {
 
 const tabBarIcon = (name) => {
   function TabBarIcon({ color }) {
-    return <Icon name={name} fill={color} size={24} />;
+    return <Icon name={name} fill={color} size={24} weight="bold" />;
   }
   TabBarIcon.propTypes = {
     color: PropTypes.string,
