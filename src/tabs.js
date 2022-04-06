@@ -62,6 +62,7 @@ const ReadTab = createFeatureFeedTab({
   options: {
     headerLeft: HeaderLogo,
     headerCenter: Empty,
+    headerRight: SearchButton,
     headerLargeTitle: false,
   },
   tabName: 'Explore',
