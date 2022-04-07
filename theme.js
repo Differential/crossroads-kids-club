@@ -7,7 +7,7 @@ import { makeIcon } from '@apollosproject/ui-kit';
 const THEME = {
   colors: { primary: '#C86600', secondary: '#C86600' },
   typography: {},
-  overrides: { 'ui-kit.ContentTitles': { onPressLike: 0 } },
+  overrides: { 'ui-kit.ContentTitles': { onPressLike: 0, onPressShare: 0 } },
 };
 
 const ICONS = {
