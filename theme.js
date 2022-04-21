@@ -12,6 +12,9 @@ const THEME = {
     HeroItemComponent: {
       labelText: 'Latest Episode',
     },
+    'ui-connected.NodeSingleConnected': () => () => ({
+      autoplay: true,
+    }),
   },
 };
 
