@@ -12,7 +12,7 @@ const THEME = {
     HeroItemComponent: {
       labelText: 'Latest Episode',
     },
-    'ui-connected.NodeSingleConnected': () => () => ({
+    'ui-media-player.ApollosPlayerContainer': () => () => ({
       autoplay: true,
     }),
   },
