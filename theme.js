@@ -3,6 +3,7 @@ import ApollosConfig from '@apollosproject/config';
 import Svg, { Path } from 'react-native-svg';
 import FRAGMENTS from '@apollosproject/ui-fragments';
 import { makeIcon } from '@apollosproject/ui-kit';
+import segment from './src/segment';
 
 const THEME = {
   colors: { primary: '#C86600', secondary: '#C86600' },
@@ -14,6 +15,9 @@ const THEME = {
     },
     'ui-media-player.ApollosPlayerContainer': () => () => ({
       autoplay: true,
+      onPlay: (properties) => segment.track('Video Played', properties),
+      onPause: (properties) => segment.track('Video Paused', properties),
+      onEnd: (properties) => segment.track('Video Completed', properties),
     }),
   },
 };
