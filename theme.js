@@ -5,6 +5,18 @@ import FRAGMENTS from '@apollosproject/ui-fragments';
 import { makeIcon } from '@apollosproject/ui-kit';
 import segment from './src/segment';
 
+const mapVideoEventProperties = (properties) => {
+  return {
+    position: properties?.elapsedTime,
+    totalLength: properties?.totalDuration,
+    sessionId: properties?.sessionId,
+    videoPlayer: "Kids' Club Mobile App",
+    livestream: false,
+    contentAssetId: properties?.id,
+    title: properties?.title,
+  };
+};
+
 const THEME = {
   colors: { primary: '#C86600', secondary: '#C86600' },
   typography: {},
@@ -15,9 +27,21 @@ const THEME = {
     },
     'ui-media-player.ApollosPlayerContainer': () => () => ({
       autoplay: true,
-      onPlay: (properties) => segment.track('Video Played', properties),
-      onPause: (properties) => segment.track('Video Paused', properties),
-      onEnd: (properties) => segment.track('Video Completed', properties),
+      onPlay: (properties) =>
+        segment.track(
+          'VideoPlaybackStarted',
+          mapVideoEventProperties(properties)
+        ),
+      onPause: (properties) =>
+        segment.track(
+          'VideoPlaybackPaused',
+          mapVideoEventProperties(properties)
+        ),
+      onEnd: (properties) =>
+        segment.track(
+          'VideoPlaybackCompleted',
+          mapVideoEventProperties(properties)
+        ),
     }),
   },
 };
