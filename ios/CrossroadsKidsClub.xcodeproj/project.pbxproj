@@ -307,7 +307,6 @@
 				BF49AE8C2649A852001C7B78 /* Embed App Extensions */,
 				14582935736121EF3034E199 /* [CP] Embed Pods Frameworks */,
 				D48C4DBD8597202C669BBC85 /* [CP] Copy Pods Resources */,
-				13A1BF6071CD43418747138C /* Upload source maps to Bugsnag */,
 			);
 			buildRules = (
 			);
@@ -455,20 +454,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrossroadsKidsClub-CrossroadsKidsClubTests/Pods-CrossroadsKidsClub-CrossroadsKidsClubTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		13A1BF6071CD43418747138C /* Upload source maps to Bugsnag */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Upload source maps to Bugsnag";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "SOURCE_MAP=\"$TMPDIR/$(md5 -qs \"$CONFIGURATION_BUILD_DIR\")-main.jsbundle.map\" ../node_modules/@bugsnag/react-native/bugsnag-react-native-xcode.sh";
 		};
 		14582935736121EF3034E199 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
