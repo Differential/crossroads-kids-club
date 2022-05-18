@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTheme, Icon, Touchable, H6 } from '@apollosproject/ui-kit';
@@ -25,12 +26,14 @@ const SearchButton = () => {
         navigation.navigate('Search');
       }}
     >
-      <Icon
-        name="search"
-        size={theme.sizing.baseUnit * 2}
-        fill={theme.colors.primary}
-        weight="bold"
-      />
+      <View>
+        <Icon
+          name="search"
+          size={theme.sizing.baseUnit * 2}
+          fill={theme.colors.primary}
+          weight="bold"
+        />
+      </View>
     </Touchable>
   );
 };
